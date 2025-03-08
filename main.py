@@ -39,6 +39,13 @@ class Presentation(Widget):
 ██║ ╚═╝ ██║██║  ██║██║ ╚████║██║  ██║╚██████╔╝███████╗██║  ██║     
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝     
 This password manager is a simple application that allows you to store your passwords in a secure way.
+It uses a master phrase to encrypt and decrypt your passwords.
+It also allows you to generate random passwords.
+It uses the Fernet symmetric encryption algorithm to encrypt and decrypt your passwords.
+It is a simple terminal application that is easy to use.
+The master phrase and Fernet key are stored in a .env file.
+The encrypted passwords are stored in a .txt file.
+TERMINAL CRAFT
         """, id="ascii_art", classes="static_header")
 
 class Choice(Widget):

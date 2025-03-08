@@ -1,10 +1,14 @@
 from textual import on
 from textual.app import ComposeResult
-from textual.widget import Widget
 from textual.containers import Vertical, Horizontal
-from textual.widgets import Button, Static, Footer, Header, Input, RichLog
+from textual.widgets import Static, Footer, Header, Input, RichLog
 from textual.screen import Screen
 from rich.table import Table
+from cryptography.fernet import Fernet
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class CLI(Screen):
     CSS_PATH = "main.tcss"
@@ -25,6 +29,26 @@ class CLI(Screen):
     def on_mount(self) -> None:
         self.query_one("#command_input").focus()
         self.query_one("#command_history", RichLog).write("Welcome to CLI mode. Type 'help' to see available commands.")
+    
+    def encrypt(self, data: str) -> str:
+        try:
+            key = os.getenv("FERNET_KEY")
+            if not key:
+                raise ValueError("FERNET_KEY environment variable not set")
+            fernet = Fernet(key.encode())
+            return fernet.encrypt(data.encode()).decode()
+        except Exception as e:
+            raise ValueError(f"Encryption failed: {str(e)}")
+
+    def decrypt(self, data: str) -> str:
+        try:
+            key = os.getenv("FERNET_KEY")
+            if not key:
+                raise ValueError("FERNET_KEY environment variable not set")
+            fernet = Fernet(key.encode())
+            return fernet.decrypt(data.encode()).decode()
+        except Exception as e:
+            raise ValueError(f"Decryption failed: {str(e)}")
     
     def clear(self) -> None:
         history = self.query_one("#command_history", RichLog)
@@ -58,13 +82,14 @@ class CLI(Screen):
         
         if missing_fields:
             history.write("[red]Error: Missing required fields: " + ", ".join(missing_fields) + "[/red]")
-            history.write("[yellow]Usage: add --password {password} --username {username} --service {service} {--notes {notes}}[/yellow]")
+            history.write("[yellow]Usage: add --password [password] --username [username] --service [service] [--notes [notes]][/yellow]")
             return
         
         if "notes" not in parsed_args:
             parsed_args["notes"] = ""
         
         try:
+            parsed_args["password"] = self.encrypt(parsed_args["password"])
             with open("passwords.txt", "a") as f:
                 entry = f"{parsed_args['service']}|{parsed_args['username']}|{parsed_args['password']}|{parsed_args['notes']}\n"
                 f.write(entry)
@@ -103,6 +128,7 @@ class CLI(Screen):
                     parts = line.strip().split("|")
                     if len(parts) >= 4: 
                         service, username, password, notes = parts[0], parts[1], parts[2], parts[3]
+                        password = self.decrypt(password)
                         table.add_row(
                             f"{i}", 
                             f"[green]{service}[/green]",
