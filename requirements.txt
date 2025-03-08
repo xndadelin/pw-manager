@@ -1,0 +1,4 @@
+extual
+python-dotenv
+cryptography
+rich

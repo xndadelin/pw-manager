@@ -23,7 +23,7 @@ A password manager, which is used through the terminal.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/pw-manager.git
+git clone https://github.com/xndadelin/pw-manager
 cd pw-manager
 ```
 
@@ -32,6 +32,13 @@ cd pw-manager
 ```bash
 pip install -r requirements.txt
 ```
+
+### Install Textualize
+
+```bash
+pip install textual
+```
+Check this for eventual errors: https://textual.textualize.io/getting_started/
 
 ### Set Up Environment Variables
 
