@@ -7,6 +7,7 @@ from rich.table import Table
 from cryptography.fernet import Fernet
 import os
 from dotenv import load_dotenv
+import random
 
 load_dotenv()
 
@@ -321,6 +322,32 @@ class CLI(Screen):
         history.write("[green]delete[/green]: Delete a password entry")
         history.write("[green]edit[/green]: Edit a password entry")
         history.write("[green]search[/green]: Search for password entries")
+        history.write("[green]generate[/green]: Generate a random password")
+
+    def generate(self) -> None:
+        history = self.query_one("#command_history", RichLog)
+        history.write("Generating random password...")
+        
+        lowercase = "abcdefghijklmnopqrstuvwxyz"
+        uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        digits = "0123456789"
+        special = "!@#$%^&*()_+"
+        all_chars = lowercase + uppercase + digits + special
+        password = []
+        
+        for _ in range(3):
+            password.append(random.choice(lowercase))
+            password.append(random.choice(uppercase))
+            password.append(random.choice(digits))
+            password.append(random.choice(special))
+        
+        for _ in range(4):
+            password.append(random.choice(all_chars))
+
+        random.shuffle(password)
+        password = "".join(password)
+        
+        history.write(f"[green]Random password generated: {password}[/green]")
     
     @on(Input.Submitted, "#command_input")
     def handle_command(self) -> None:
@@ -341,6 +368,7 @@ class CLI(Screen):
             "delete": self.delete,
             "edit": self.edit,
             "search": self.search,
+            "generate": self.generate
         }
         
         try:

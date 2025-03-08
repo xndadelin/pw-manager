@@ -1,6 +1,6 @@
 from textual.app import App, ComposeResult
 from textual.widget import Widget
-from textual.containers import Vertical
+from textual.containers import Vertical, Horizontal
 from textual.widgets import Button as TextualButton, Static, Header, Footer
 from textual import on
 from screens.auth.auth import Auth
@@ -9,7 +9,7 @@ from screens.generate.generate import Generate
 
 class Presentation(Widget):
     def compose(self) -> ComposeResult:
-        yield Header(show_clock=True, )
+        yield Header(show_clock=True)
         yield Static("""
 ████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗       
 ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║       
@@ -50,28 +50,38 @@ TERMINAL CRAFT
 
 class Choice(Widget):
     def compose(self) -> ComposeResult:
-      yield Static("""
-⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣠⣀⣀⣀⣠⡀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
-⣦⣤⣤⣤⣤⣤⣤⣤⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣤⣤⣤⣤⣤⣤
-⠈⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁
-⠀⠀⠈⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀
-⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""", id="ascii_art")
-      with Vertical(id="buttons_container"):
+        yield Static("""
+
+
+             *****************                                                                      
+          =*************************                                                         **     
+         =*******+***********************                                                 ****      
+        =*******   ***** -********************                                       ********       
+       =+******.   ****   *****  =****************                             *************        
+      ==*******    .+*   -****    **************************         **********************         
+     ==*******.          ***+  *  ****     ************************************     **************  
+    ==*******+   ****   +**+ .**  **=  -*****.  ***********************=***  ** -* .************    
+    =+*******=  ****+  .**+      .**  .******   **  *******: .*** +****  **: -*: .++ +********      
+   ==***************:  **-  ***  +*+  *******  .   *******  +:.**  ****. ***  ** :*: ******         
+  ==+*************************   **+  ******:    +*******: ******  ***** .**  **- :******           
+  ==          **********************     **=  *+  *******. +*****  ******    *********              
+ ===                  ****************=-**+  ***  .*******  *****-      ***********                 
+ ===                         *******************- .*******+    :****************                    
+ ==                                *****************************************                        
+===                                        ****************************                             
+===                                                                                                 
+===                                                                                                 
+
+                                                                                                                                                                                                                     
+""", id="ascii_art")
+    
+        with Vertical(id="buttons_container"):
             yield TextualButton(label="Authenticate & start using the password manager", id="authenticate_button", variant="primary")
             yield TextualButton(label="Quit", id="quit_button", variant="error")
             yield TextualButton(label="Generate a random password", id="generate_button", variant="primary")
 
-      yield Footer()
+            
+        yield Footer()
 
     @on(TextualButton.Pressed, '#authenticate_button')
     def show_auth(self) -> None:
@@ -85,8 +95,6 @@ class Choice(Widget):
     def show_generate(self) -> None:
         self.app.push_screen("Generate")
 
-    
-
 class PasswordManager(App):
     CSS_PATH = "main.tcss"
     SCREENS = {
@@ -94,6 +102,7 @@ class PasswordManager(App):
         "CLI": CLI,
         "Generate": Generate
     }
+
     def compose(self) -> ComposeResult:
         yield Presentation()
         yield Choice()

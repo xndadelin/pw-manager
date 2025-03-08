@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from textual.app import App, ComposeResult
+from textual.app import ComposeResult
 from textual.containers import Vertical
 from textual.widgets import Button as TextualButton, Static, Footer, Header, Input
 from textual import on
