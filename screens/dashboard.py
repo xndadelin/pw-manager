@@ -1,1 +1,0 @@
-# The dashboard where the user can either add a password or view their passwords, or log out.

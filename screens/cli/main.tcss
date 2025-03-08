@@ -1,0 +1,48 @@
+#cli_container {
+    width: 100%;
+    height: 100%;
+    background: #0a192f;
+    padding: 1;
+}
+
+#command_history {
+    width: 100%;
+    height: 1fr;
+    background: #112240;
+    color: #f1f5f9;
+    margin-bottom: 1;
+    min-height: 10;
+    border: solid #1e3a8a;
+}
+
+#command_prompt_container {
+    width: 100%;
+    height: auto;
+    background: #0f172a;
+    margin-top: 1;
+}
+
+#prompt {
+    width: auto;
+    color: #38bdf8;
+    text-style: bold;
+}
+
+#command_input {
+    background: #0f172a;
+    border: none;
+    color: #f1f5f9;
+    width: 1fr;
+}
+
+#command_input:focus {
+    border: none;
+}
+
+#cli_title {
+    background: #1e3a8a;
+    color: #f1f5f9;
+    text-style: bold;
+    text-align: center;
+    padding: 1;
+}

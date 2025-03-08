@@ -1,0 +1,38 @@
+Generate {
+    background: #0a192f;
+    align: center middle;
+}
+
+#password_display {
+    background: #112240;
+    color: #60a5fa;
+    width: 60%;
+    height: auto;
+    padding: 2;
+    margin: 1 0;
+    text-align: center;
+    text-style: bold;
+    border: tall #1e3a8a;
+}
+
+#generate {
+    background: #2563eb;
+    color: #f1f5f9;
+    margin-top: 1;
+    width: auto;
+}
+
+#generate:hover {
+    background: #3b82f6;
+}
+
+Header {
+    background: #1e3a8a;
+    color: #f1f5f9;
+    text-align: center;
+}
+
+Footer {
+    background: #0f172a;
+    color: #94a3b8;
+}

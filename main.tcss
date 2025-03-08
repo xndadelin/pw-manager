@@ -1,9 +1,9 @@
 Hello {
     layout: vertical;
-    background: #0A0A0A;
+    background: #0a192f;
     width: 100%;
     height: 100%;
-    border: tall $accent;
+    border: tall #3b82f6;
     align: center middle;
     padding: 1;
 }
@@ -15,7 +15,7 @@ Presentation {
 }
 
 #ascii_art {
-    color: #87ceeb;
+    color: #60a5fa;
     text-align: center;
     padding: 1;
 }
@@ -28,9 +28,21 @@ Choice {
 Horizontal {
     align-horizontal: center;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
-Header {
-    padding: 0 0 0 0;
-    margin-top: 0;
+
+TextualButton {
+    margin: 0;
+}
+
+#buttons_container {
+    width: 100%;
+    align-horizontal: center;
+    margin: 1 0;
+}
+
+#buttons_container > Button {
+    margin-bottom: 1;
+    width: 80%;
 }
