@@ -62,3 +62,57 @@
 [07:47:13] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:00:51          
 [07:48:18] INFO     <ganglion> In: 152 bytes/s Out: 12.3 kB/s                   
 [07:48:18] INFO     <ganglion> In: 35 bytes/s Out: 6.3 kB/s                     
+[07:48:54] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:01:42          
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:49:05] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:00:11          
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:49:07] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:00:01          
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:49:08] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:00:01          
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:49:09] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:00:01          
+[07:49:10] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:51:56] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:02:46          
+[07:51:57] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:53:21] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:01:24          
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:54:51] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:01:30          
+[07:54:52] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:59:29] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:04:37          
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[08:03:18] INFO     <ganglion> In: 51 bytes/s Out: 6.2 kB/s                     
+[08:06:52] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Disclaimer ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                              ┃
+┃  textual-web is currently under active development, and not suitable for     ┃
+┃  production use.                                                             ┃
+┃                                                                              ┃
+┃  For support, please join the Discord server                                 ┃
+┃                                                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+[08:15:08] INFO     version='0.8.0'                                             
+           INFO     environment='prod'                                          
+           INFO     loading config from '/workspaces/pw-manager/serve.toml'     
+           INFO     connecting to Ganglion                                      
+           INFO     <ganglion> No API Key provided. Using a temporary account.  
+           INFO     <ganglion> Create an account with 'textual-web --signup'!   
+           INFO     <ganglion> ---                                              
+           INFO     <ganglion> Serving                                          
+                    https://textual-web.io/drrbpbphta60/passwordmanager         
+[08:15:15] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:00:00          
+[08:18:18] INFO     <ganglion> In: 25 bytes/s Out: 3.4 kB/s                     
+[08:18:18] INFO     <ganglion> In: 2 bytes/s Out: 1 byte/s                      
+[08:21:55] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:15:02          
+           INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:22:25          

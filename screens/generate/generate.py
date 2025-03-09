@@ -1,13 +1,15 @@
 import random
 
-from textual.app import  ComposeResult
+from textual.app import ComposeResult
 from textual.widgets import Button as TextualButton, Static, Header, Footer
 from textual import on
 from textual.screen import Screen
+from textual.containers import Vertical
 
 class Generate(Screen):
     CSS_PATH = "main.tcss"
     password = ""
+    
     def on_mount(self) -> None:
         self.password = ""
         self.generate_password()
@@ -36,12 +38,13 @@ class Generate(Screen):
             self.password_display.update(f"Your password is: {self.password}")
 
     def compose(self) -> ComposeResult:
-        yield Header()
-        self.password_display = Static(f"Your password is: {self.password}", id="password_display")
-        yield self.password_display
-        yield TextualButton("Generate", id="generate")
-        yield TextualButton(label="Go back", id="back_button", variant="primary")
-        yield Footer()
+        with Vertical(id="auth_container"):
+            yield Header()
+            self.password_display = Static(f"Your password is: {self.password}", id="password_display")
+            yield self.password_display
+            yield TextualButton("Generate", id="generate")
+            yield TextualButton(label="Go back", id="back_button", variant="primary")
+            yield Footer()
 
     @on(TextualButton.Pressed, "#generate")
     def on_generate(self) -> None:

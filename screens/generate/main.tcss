@@ -3,6 +3,11 @@ Generate {
     align: center middle;
 }
 
+#auth_container {
+    align: center middle;
+    height: 100%;
+}
+
 #password_display {
     background: #112240;
     color: #60a5fa;
@@ -35,4 +40,8 @@ Header {
 Footer {
     background: #0f172a;
     color: #94a3b8;
+}
+
+Vertical {
+    align: center middle;
 }
