@@ -1,4 +1,4 @@
-extual
+textual
 python-dotenv
 cryptography
 rich
