@@ -1,0 +1,64 @@
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Disclaimer ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                              ┃
+┃  textual-web is currently under active development, and not suitable for     ┃
+┃  production use.                                                             ┃
+┃                                                                              ┃
+┃  For support, please join the Discord server                                 ┃
+┃                                                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+[07:45:28] INFO     version='0.8.0'                                             
+           INFO     environment='prod'                                          
+           INFO     loading config from '/workspaces/pw-manager/serve.toml'     
+           INFO     connecting to Ganglion                                      
+           INFO     <ganglion> No API Key provided. Using a temporary account.  
+           INFO     <ganglion> Create an account with 'textual-web --signup'!   
+[07:45:29] INFO     <ganglion> ---                                              
+           INFO     <ganglion> Serving                                          
+                    https://textual-web.io/3gt4eaeem9b5/passwordmanager         
+[07:45:44] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[F
+[07:45:47] INFO     Exit requested                                              
+           INFO     Closing 1 session(s)                                        
+           INFO     Disconnected from Ganglion                                  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Disclaimer ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                              ┃
+┃  textual-web is currently under active development, and not suitable for     ┃
+┃  production use.                                                             ┃
+┃                                                                              ┃
+┃  For support, please join the Discord server                                 ┃
+┃                                                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+[07:46:13] INFO     version='0.8.0'                                             
+           INFO     environment='prod'                                          
+           INFO     loading config from '/workspaces/pw-manager/serve.toml'     
+           INFO     connecting to Ganglion                                      
+           INFO     <ganglion> No API Key provided. Using a temporary account.  
+           INFO     <ganglion> Create an account with 'textual-web --signup'!   
+           INFO     <ganglion> ---                                              
+           INFO     <ganglion> Serving                                          
+                    https://textual-web.io/g6jyvvvt735a/passwordmanager         
+[07:46:21] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Disclaimer ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                              ┃
+┃  textual-web is currently under active development, and not suitable for     ┃
+┃  production use.                                                             ┃
+┃                                                                              ┃
+┃  For support, please join the Discord server                                 ┃
+┃                                                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+[07:47:04] INFO     version='0.8.0'                                             
+           INFO     environment='prod'                                          
+           INFO     loading config from '/workspaces/pw-manager/serve.toml'     
+           INFO     connecting to Ganglion                                      
+           INFO     <ganglion> No API Key provided. Using a temporary account.  
+           INFO     <ganglion> Create an account with 'textual-web --signup'!   
+           INFO     <ganglion> ---                                              
+           INFO     <ganglion> Serving                                          
+                    https://textual-web.io/fdaavvujyr84/passwordmanager         
+[07:47:11] INFO     <ganglion> 89.123.60.185 'PasswordManager' 'Mozilla/5.0     
+                    (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0' 
+[07:47:13] INFO     <ganglion> 89.123.60.185 'PasswordManager' 0:00:51          
+[07:48:18] INFO     <ganglion> In: 152 bytes/s Out: 12.3 kB/s                   
+[07:48:18] INFO     <ganglion> In: 35 bytes/s Out: 6.3 kB/s                     
