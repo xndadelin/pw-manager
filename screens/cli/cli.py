@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 from textual import on
 from textual.app import ComposeResult
 from textual.containers import Vertical, Horizontal
-from textual.widgets import Static, Footer, Header, Input, RichLog
+from textual.widgets import Static, Footer, Header, Input, RichLog, Button as TextualButton
 from textual.screen import Screen
 from rich.table import Table
 import sqlite3
@@ -17,6 +17,7 @@ class CLI(Screen):
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True)
         with Vertical(id="cli_container"):
+            yield TextualButton(label="Go back", id="back_button", variant="primary")
             yield Static("Command line interface", id="cli_title")
             yield RichLog(id="command_history", highlight=True, markup=True)
             with Horizontal(id="command_prompt_container"):
@@ -24,6 +25,10 @@ class CLI(Screen):
                 yield Input(placeholder="Enter command", id="command_input")
         yield Footer()
 
+    @on(TextualButton.Pressed, "#back_button")
+    def handle_back_button_pressed(self) -> None:
+        self.app.pop_screen()
+        
     def on_mount(self) -> None:
         self.query_one("#command_input").focus()
         self.query_one("#command_history", RichLog).write("Welcome to CLI mode. Type 'help' to see available commands.")

@@ -40,8 +40,13 @@ class Generate(Screen):
         self.password_display = Static(f"Your password is: {self.password}", id="password_display")
         yield self.password_display
         yield TextualButton("Generate", id="generate")
+        yield TextualButton(label="Go back", id="back_button", variant="primary")
         yield Footer()
 
     @on(TextualButton.Pressed, "#generate")
     def on_generate(self) -> None:
         self.generate_password()
+    
+    @on(TextualButton.Pressed, "#back_button")
+    def handle_back_button_pressed(self) -> None:
+        self.app.pop_screen()

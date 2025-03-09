@@ -3,7 +3,7 @@ Auth {
     align: center middle;
 }
 
-#auth_container {
+#auth_container {   
     width: 60%;
     max-width: 60;
     min-width: 40;
@@ -38,7 +38,7 @@ Auth {
     border: tall #60a5fa;
 }
 
-#login_button {
+#login_button, #back_button {
     margin: 2 0 0 0;
     width: 100%;
     background: #2563eb;
@@ -46,11 +46,11 @@ Auth {
     height: 3;
 }
 
-#login_button:hover {
+#login_button:hover, #back_button {
     background: #3b82f6;
 }
 
-#login_button:focus {
+#login_button:focus, #back_button {
     background: #60a5fa;
     border: tall #93c5fd;
 }
