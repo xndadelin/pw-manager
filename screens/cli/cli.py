@@ -242,7 +242,7 @@ class CLI(Screen):
         history.write("[green]add[/green]: Add a new password entry")
         history.write("[green]list[/green]: List all password entries")
         history.write("[green]delete[/green]: Delete a password entry")
-        history.write("[green]edit[/green]: Edit a password entry")``
+        history.write("[green]edit[/green]: Edit a password entry")
         history.write("[green]search[/green]: Search for password entries")
         history.write("[green]generate[/green]: Generate a random password")
 
