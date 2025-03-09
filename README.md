@@ -1,3 +1,4 @@
+[![wakatime](https://wakatime.com/badge/github/xndadelin/pw-manager.svg)](https://wakatime.com/badge/github/xndadelin/pw-manager)
 # pw-manager
 
 A password manager, which is used through the terminal.
