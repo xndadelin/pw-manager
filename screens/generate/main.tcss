@@ -11,7 +11,6 @@ Generate {
 #password_display {
     background: #112240;
     color: #60a5fa;
-    width: 60%;
     height: auto;
     padding: 2;
     margin: 1 0;
@@ -24,7 +23,6 @@ Generate {
     background: #2563eb;
     color: #f1f5f9;
     margin-top: 1;
-    width: auto;
 }
 
 #generate:hover {
