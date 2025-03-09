@@ -106,24 +106,16 @@ class CLI(Screen):
         try:
             db = sqlite3.connect('passwords.db')
             cursor = db.cursor()
-            cursor.execute("SELECT * FROM entries")
+            cursor.execute("SELECT rowid, * FROM entries")
             entries = cursor.fetchall()
             if not entries:
                 history.write("[yellow]No passwords saved yet.[/yellow]")
                 return
-            lines = []
-            for entry in entries:
-                service, username, password, notes = entry
-                lines.append(f"{service}|{username}|{password}|{notes}\n")
-            
             table = Table("ID", "Service", "Username", "Password", "Notes", title="Password entries")
-            for i, line in enumerate(lines, 1):
-                if line.strip():
-                    parts = line.strip().split("|")
-                    if len(parts) >= 4:
-                        service, username, password, notes = parts[0], parts[1], parts[2], parts[3]
-                        password = self.decrypt(password)
-                        table.add_row(f"{i}", f"[green]{service}[/green]", f"[yellow]{username}[/yellow]", f"[red]{password}[/red]", notes)
+            for entry in entries:
+                rowid, service, username, password, notes = entry
+                password = self.decrypt(password)
+                table.add_row(f"{rowid}", f"[green]{service}[/green]", f"[yellow]{username}[/yellow]", f"[red]{password}[/red]", notes)
             history.write(table)
         except Exception as e:
             history.write(f"[red]Error reading passwords: {str(e)}[/red]")
@@ -179,12 +171,12 @@ class CLI(Screen):
                 return
             db = sqlite3.connect('passwords.db')
             cursor = db.cursor()
-            cursor.execute("SELECT * FROM entries")
-            entries = cursor.fetchall()
-            if not entries or entry_id < 1 or entry_id > len(entries):
+            cursor.execute("SELECT rowid, * FROM entries WHERE rowid = ?", (entry_id,))
+            entry = cursor.fetchone()
+            if not entry:
                 history.write(f"[red]Error: Entry #{entry_id} does not exist[/red]")
                 return
-            service, username, password, notes = entries[entry_id - 1]
+            service, username, password, notes = entry[1:]
             if "service" in parsed_args:
                 service = parsed_args["service"]
             if "username" in parsed_args:
