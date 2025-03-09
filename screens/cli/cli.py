@@ -8,6 +8,7 @@ from textual.widgets import Static, Footer, Header, Input, RichLog, Button as Te
 from textual.screen import Screen
 from rich.table import Table
 import sqlite3
+import random
 
 load_dotenv()
 
@@ -241,13 +242,12 @@ class CLI(Screen):
         history.write("[green]add[/green]: Add a new password entry")
         history.write("[green]list[/green]: List all password entries")
         history.write("[green]delete[/green]: Delete a password entry")
-        history.write("[green]edit[/green]: Edit a password entry")
+        history.write("[green]edit[/green]: Edit a password entry")``
         history.write("[green]search[/green]: Search for password entries")
         history.write("[green]generate[/green]: Generate a random password")
 
     def generate(self) -> None:
         history = self.query_one("#command_history", RichLog)
-        history.write("Generating random password...")
         lowercase = "abcdefghijklmnopqrstuvwxyz"
         uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         digits = "0123456789"

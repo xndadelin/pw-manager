@@ -1,5 +1,3 @@
-import random
-
 from textual.app import ComposeResult
 from textual.widgets import Button as TextualButton, Static, Header, Footer
 from textual import on
@@ -15,6 +13,7 @@ class Generate(Screen):
         self.generate_password()
 
     def generate_password(self) -> None:
+        import random
         lowercase = "abcdefghijklmnopqrstuvwxyz"
         uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         digits = "0123456789"
